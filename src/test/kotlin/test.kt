@@ -39,6 +39,6 @@ class TreiberStackTest2 {
 
     @Test
     fun test() {
-        StressOptions().threads(2).check(TreiberStackTest::class)
+        StressOptions().threads(2).check(TreiberStackTest2::class)
     }
 }
