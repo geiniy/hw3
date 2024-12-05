@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.TreiberStackTest3" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-05T05:40:05" hostname="DESKTOP-2F84RKM" time="26.791">
+  <properties/>
+  <testcase name="test()" classname="org.example.TreiberStackTest3" time="26.791"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[To make verification faster, you can specify the state equivalence relation on your sequential specification.
+At the current moment, `TreiberStackTest3` does not specify it, or the equivalence relation implementation is incorrect.
+To fix this, please implement `equals()` and `hashCode()` functions on `TreiberStackTest3`; the simplest way is to extend `VerifierState`
+and override the `extractState()` function, which is called at once and the result of which is used for further `equals()` and `hashCode()` invocations.
+]]></system-err>
+</testsuite>
