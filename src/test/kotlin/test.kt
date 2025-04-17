@@ -6,7 +6,7 @@ import org.jetbrains.kotlinx.lincheck.strategy.managed.modelchecking.ModelChecki
 import org.jetbrains.kotlinx.lincheck.strategy.stress.StressOptions
 import org.junit.jupiter.api.Test
 
-class TreiberStackTest {
+class TreiberStackTestStress {
     private val stack = TreiberStack<Int>()
 
     @Operation
@@ -21,11 +21,11 @@ class TreiberStackTest {
 
     @Test
     fun test() {
-        StressOptions().check(TreiberStackTest::class)
+        StressOptions().check(TreiberStackTestStress::class)
     }
 }
 
-class TreiberStackTest2 {
+class TreiberStackTestModelOptions {
     private val stack = TreiberStack<Int>()
 
     @Operation
@@ -40,25 +40,6 @@ class TreiberStackTest2 {
 
     @Test
     fun test() {
-        StressOptions().threads(2).check(TreiberStackTest2::class)
-    }
-}
-
-class TreiberStackTest3 {
-    private val stack = TreiberStack<Int>()
-
-    @Operation
-    fun push(x: Int) {
-        stack.push(x)
-    }
-
-    @Operation
-    fun pop(): Int? {
-        return stack.pop()
-    }
-
-    @Test
-    fun test() {
-        ModelCheckingOptions().check(TreiberStackTest3::class)
+        ModelCheckingOptions().check(TreiberStackTestModelOptions::class)
     }
 }
